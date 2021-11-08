@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+.wrap{
+  width: 1020px;
+  margin: 0 auto;
+}
+
+
+header{}
+header .wrap{background-color: #fff;}
+
+#top_menu{
+  display: flex;
+  justify-content: end;
+}
+#top_menu ul{
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+#top_menu ul li{
+  padding: 0 9px 0 10px;
+  position: relative;
+}
+#top_menu ul li::after{
+  content: "";
+  display: block;
+  width: 1px;
+  height: 15px;
+  background-color: #ccc;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#top_menu ul li:last-child{
+  padding-right: 0;
+}
+#top_menu ul li:last-child::after{
+  display: none;
+}
+#top_menu ul li a{
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+}
+
+#header_part{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+}
+#header_part .logo{}
+#header_part .logo img{
+  width: 248px;
+  height: 42px;
+}
+
+#header_part .search{}
+#header_part .search .search_box{
+  display: flex;
+  align-items: center;
+  width: 340px;
+  height: 40px;
+  background-color: #fff;
+  border: 2px solid #9bce26;
+  border-radius: 20px;
+  padding: 0 20px;  
+  position: relative;
+}
+#header_part .search .search_box input{
+  width: 100%;
+  height: 36px;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+}
+#header_part .search .search_box img{
+  width: 21px;
+  height: 21px;
+
+}
+
+#header_part .my_menu{}
+#header_part .my_menu ul{
+  display: flex;
+}
+#header_part .my_menu ul li{
+  padding: 0 10px;
+  position: relative;
+}
+#header_part .my_menu ul li::after{
+  content: "";
+  display: block;
+  background-color: #ccc;
+  width: 1px;
+  height: 18px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#header_part .my_menu ul li:last-child{
+  padding-right: 0;
+}
+#header_part .my_menu ul li:last-child::after{
+  display: none;
+}
+#header_part .my_menu ul li a{
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  padding-bottom: 5px;
+  position: relative;
+}
+#header_part .my_menu ul li:first-child a{
+  width: 85px;
+  background-image: url(../image/ico_delivery_flag.png);
+  background-repeat: no-repeat;
+  background-size: 22px 20px;
+  background-position: right 0;
+  padding-bottom: 10px;
+}
+#header_part .my_menu ul li a::after{
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+#header_part .my_menu ul li:hover a::after{
+  display: block;
+}
