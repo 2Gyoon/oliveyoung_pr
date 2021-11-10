@@ -8,40 +8,251 @@
   <title>11월 출석체크 기획전 상세 | 올리브영</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./js/script.js"></script>
 </head>
 
 <body>
   <!-- header 1020px -->
   <header>
-    <div class="wrap">
-      <div id="top_menu">
-        <ul>
-          <li><a href="#">회원가입</a></li>
-          <li><a href="#">로그인</a></li>
-          <li><a href="#">장바구니</a></li>
-          <li><a href="#">주문배송</a></li>
-          <li><a href="#">고객센터</a></li>
-          <li><a href="#">매장안내</a></li>
-          <li><a href="#">Global</a></li>
-        </ul>
-      </div>
-      <div id="header_part">
-        <a href="/index.html" class="logo">
-          <img src="./image/h1_logo.png" alt="로고">
-        </a>
-
-        <div class="search">
-          <div class="search_box">
-            <input type="text" placeholder="검색어를 입력해주세요.">
-            <img src="./image/ico_search21x212.png" alt="검색 아이콘">
+    <div id="header_top">
+      <div class="wrap">
+        <div id="top_menu">
+          <ul>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">장바구니</a></li>
+            <li><a href="#">주문배송</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">매장안내</a></li>
+            <li><a href="#">Global</a></li>
+          </ul>
+        </div>
+        <div id="header_part">
+          <a href="/index.html" class="logo">
+            <img src="./image/h1_logo.png" alt="로고">
+          </a>
+  
+          <div class="search">
+            <div class="search_box">
+              <input type="text" placeholder="검색어를 입력해주세요.">
+              <img src="./image/ico_search21x212.png" alt="검색 아이콘">
+            </div>
+          </div>
+  
+          <div class="my_menu">
+            <ul>
+              <li><a href="#">오늘드림</a></li>
+              <li><a href="#">관심매장소식</a></li>
+              <li><a href="#">최근 본 상품</a></li>
+            </ul>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="my_menu">
-          <ul>
-            <li><a href="#">오늘드림</a></li>
-            <li><a href="#">관심매장소식</a></li>
-            <li><a href="#">최근 본 상품</a></li>
+    <div id="header_bot">
+      <div class="wrap">
+        <div id="main_menu">
+          <div id="category">
+            <span>카테고리</span>
+            <ul class="menu_board">
+              <li class="beauty">
+                <h2>뷰티</h2>
+                <ul>
+                  <li><a href="#">스킨케어</a>
+                    <ul>
+                      <li>스킨/로션/올인원</li>
+                      <li>에센스/크림</li>
+                      <li>미스트/오일</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">마스크팩</a>
+                    <ul>
+                      <li>시트팩/패드</li>
+                      <li>페이셜팩</li>
+                      <li>코팩/패치</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">클렌징</a>
+                    <ul>
+                      <li>페이셜클렌징</li>
+                      <li>메이크업클렌징</li>
+                      <li>필링/패드</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">선케어</a>
+                    <ul>
+                      <li>선블록</li>
+                      <li>태닝/애프터선</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">더모 코스메틱</a>
+                    <ul>
+                      <li>스킨/로션</li>
+                      <li>에센스/크림</li>
+                      <li>미스트/오일</li>
+                      <li>마스크팩</li>
+                      <li>클렌징</li>
+                      <li>선케어</li>
+                      <li>바디케어</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">메이크업</a>
+                    <ul>
+                      <li>립메이크업</li>
+                      <li>베이스메이크업</li>
+                      <li>아이메이크업</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">네일</a>
+                    <ul>
+                      <li>네일용품</li>
+                      <li>페디용품</li>
+                      <li>케어</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">바디케어</a>
+                    <ul>
+                      <li>데오드란트</li>
+                      <li>로션/크림</li>
+                      <li>립케어</li>
+                      <li>미스트/오일</li>
+                      <li>워시/스크럽</li>
+                      <li>제모용품</li>
+                      <li>핸드/풋</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">헤어케어</a>
+                    <ul>
+                      <li>샴푸/린스</li>
+                      <li>트리트먼트/팩</li>
+                      <li>헤어기기</li>
+                      <li>헤어브러쉬</li>
+                      <li>염색약/펌</li>
+                      <li>스타일링</li>
+                      <li>탈모케어</li>
+                      <li>에센스</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">향수/디퓨저</a>
+                    <ul>
+                      <li>여성향수</li>
+                      <li>남성향수</li>
+                      <li>캔들/디퓨저</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">미용소품</a>
+                    <ul>
+                      <li>기타소품</li>
+                      <li>네일소품</li>
+                      <li>미용가전</li>
+                      <li>얼굴소품</li>
+                      <li>헤어소품</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">남성</a>
+                    <ul>
+                      <li>스킨케어</li>
+                      <li>메이크업</li>
+                      <li>헤어케어</li>
+                      <li>쉐이빙</li>
+                      <li>바디케어</li>
+                      <li>향수</li>
+                      <li>매너용품</li>
+                      <li>건강식품</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="health">
+                <h2>헬스&푸드</h2>
+                <ul>
+                  <li><a href="#">건강/위생용품</a>
+                    <ul>
+                      <li>덴탈케어</li>
+                      <li>스팟패치/의료용품</li>
+                      <li>아이케어</li>
+                      <li>여성/위생용품</li>
+                      <li>운동/마사지용품</li>
+                      <li>물티슈/손소독티슈</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">건강식품</a>
+                    <ul>
+                      <li>비타민류</li>
+                      <li>장 건강</li>
+                      <li>체중관리</li>
+                      <li>이너뷰티 케어</li>
+                      <li>여성 건강</li>
+                      <li>혈행/눈/간 건강</li>
+                      <li>홍삼/면역케어</li>
+                      <li>관절/뼈/치아 건강</li>
+                      <li>기타(스페셜케어)</li>
+                      <li>선물용 건강세트</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">푸드</a>
+                    <ul>
+                      <li>식단/이너뷰티</li>
+                      <li>간편식/요리</li>
+                      <li>디저트/간식</li>
+                      <li>생수/음료</li>
+                      <li>베이비푸드</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="life">
+                <h2>라이프</h2>
+                <ul>
+                  <li><a href="#">리빙/홈</a>
+                    <ul>
+                      <li>공간방향/제습</li>
+                      <li>홈 클리닝</li>
+                      <li>생활</li>
+                      <li>주방</li>
+                      <li>라이프웨어</li>
+                      <li>테크</li>
+                      <li>홈데코</li>
+                      <li>악세서리</li>
+                      <li>굿즈</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">반려동물</a>
+                    <ul>
+                      <li>강아지 식품</li>
+                      <li>강아지 용품</li>
+                      <li>고양이 식품</li>
+                      <li>고양이 용품</li>
+                    </ul>
+                  </li>
+                  <li><a href="#">베이비</a>
+                    <ul>
+                      <li>기저귀</li>
+                      <li>분유/이유식/간식</li>
+                      <li>스킨/바디케어</li>
+                      <li>유아용품</li>
+                      <li>베이비 물티슈</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <div class="close">
+                <img src="./image/ico_close23x23.png" alt="메뉴닫기">
+              </div>
+            </ul>
+          </div>
+          <ul id="menu_list">
+            <li><a href="#">오톡</a></li>
+            <li><a href="#">신상</a></li>
+            <li><a href="#">랭킹</a></li>
+            <li><a href="#">프리미엄관</a></li>
+            <li><a href="#">기획전</a></li>
+            <li><a href="#">세일</a></li>
+            <li><a href="#">기프트카드</a></li>
+            <li><a href="#">멤버십/쿠폰</a></li>
+            <li><a href="#">이벤트</a></li>
           </ul>
         </div>
       </div>

@@ -1,4 +1,8 @@
 @charset "utf-8";
+*{
+  box-sizing: border-box;
+}
+
 
 .wrap{
   width: 1020px;
@@ -7,6 +11,7 @@
 
 
 header{}
+#header_top{}
 header .wrap{background-color: #fff;}
 
 #top_menu{
@@ -133,4 +138,164 @@ header .wrap{background-color: #fff;}
 }
 #header_part .my_menu ul li:hover a::after{
   display: block;
+}
+
+#header_bot{
+  border-top: 1px solid #ddd;
+  border-bottom: 2px solid #555;
+}
+#header_bot .wrap{
+  background-color: #fff;
+}
+#main_menu{
+  display: flex;
+  align-items: center;
+}
+#category{
+  width: 170px;
+  text-align: center;
+  cursor: pointer;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  position: relative;
+}
+#category span{
+  line-height: 44px;
+  position: relative;
+  font-size: 15px;
+  font-weight: 700;
+  display: block;
+}
+#category span.active{
+  background-color: #2f3030;
+  border-color: #2f3030;
+  color: #fff;
+}
+#category span::before{
+  content: "";
+  display: block;
+  background-image: url(../image/ico_menu_off.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 20px;
+  top: 15px;
+}
+#category span.active::before{
+  background-image: url(../image/ico_menu_on.png);
+}
+#category > ul{
+  position: absolute;
+  left: 0;
+  top: 44px;
+  display: flex;
+  width: 1020px;
+  border: 2px solid #2f3030;
+  cursor: default;
+}
+#category > ul > li{
+  padding: 15px 22px;
+  text-align: left;
+  width: 254px;
+}
+#category > ul > li h2{
+  border-bottom: 1px solid #666;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 700;
+}
+#category > ul > li > ul{
+  padding-top: 20px;
+  padding-left: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 800px;
+}
+#category > ul > li > ul > li{}
+#category > ul > li > ul > li > a{
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+}
+#category > ul > li > ul > li > a::after{
+  content: url(../image/bar_arrow_6x10.png);
+  position: absolute;
+  right: -13px;
+  top: 1px;
+}
+#category > ul > li > ul > li > ul{
+  padding: 15px 0;
+}
+#category > ul > li > ul > li > ul > li{
+  padding-bottom: 10px;
+  font-size: 13px;
+  color: #888;
+  font-weight: 700;
+  cursor: pointer;
+}
+#category > ul > li > ul > li > ul > li:hover{
+  color: #333;
+  transition: all 0.3s;
+  position: relative;
+}
+
+#category > ul > li.beauty{
+  width: 508px;
+}
+#category > ul > li.beauty > ul{}
+#category > ul > li.beauty > ul > li{}
+#category > ul > li.beauty > ul > li > a{}
+#category > ul > li.beauty > ul > li > ul{
+  
+}
+#category > ul > li.beauty > ul > li > ul > li{
+
+}
+#category > ul > li.health{
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+#category > ul > li.health > ul{}
+#category > ul > li.health > ul > li{}
+#category > ul > li.health > ul > li > a{}
+#category > ul > li.health > ul > li > ul{}
+#category > ul > li.health > ul > li > ul > li{}
+
+#category > ul > li.life{}
+#category > ul > li.life > ul{}
+#category > ul > li.life > ul > li{}
+#category > ul > li.life > ul > li > a{}
+#category > ul > li.life > ul > li > ul{}
+#category > ul > li.life > ul > li > ul > li{}
+
+#category > ul .close{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: #000;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#menu_list{
+  display: flex;
+  padding-left: 10px;
+}
+#menu_list li{
+  padding: 0 20px;
+}
+#menu_list li a{
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+#menu_list li a:hover{
+  color: #f27370;
+  border-bottom: 2px solid #f27370;
 }
