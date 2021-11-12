@@ -9,6 +9,10 @@
   margin: 0 auto;
 }
 
+header, footer, #visual_part, #event_title{
+  min-width: 1020px;
+}
+
 /* 헤더영역 */
 header{}
 #header_top{}
@@ -489,10 +493,48 @@ footer{
   padding-left: 0;
 }
 
-#footer_top .select_site{}
-#footer_top .select_site p{}
+#footer_top .select_site{
+  width: 235px;
+  cursor: pointer;
+  font-size: 12px;
+  position: relative;
+}
+#footer_top .select_site > p{
+  padding: 0 10px;
+  height: 30px;
+  line-height: 28px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  background-image: url(../image/ico_footer_arrow.png);
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+}
 #footer_top .select_site .select_part{
-  display: none;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  overflow-y: auto;
+  background-color: #fff;
+  position: absolute;
+}
+#footer_top .select_site .select_part > ul{}
+#footer_top .select_site .select_part > ul > li:not(:first-child){
+  padding-top: 20px;
+}
+#footer_top .select_site .select_part > ul > li > p{
+  color: #777;
+  font-weight: bold;
+  cursor: default;
+}
+#footer_top .select_site .select_part > ul > li > ul{}
+#footer_top .select_site .select_part > ul > li > ul > li{
+  padding: 10px 0 0 10px;
+}
+#footer_top .select_site .select_part > ul > li > ul > li > a{
+  color: #777;
+  text-decoration: none;
 }
 
 #footer_mid{}

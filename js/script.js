@@ -18,5 +18,18 @@ $(document).ready(function(){
       $(".menu_board").hide();
       $("#category > span").removeClass("active");
     }
-  })
+  });
+
+  // footer 계열사 바로가기
+  $(".select_part").hide();
+  $(".select_site").click(function(){
+    const selActive = $(".select_part").hasClass("active");
+    if(selActive === false){
+      $(".select_part").addClass("active");
+      $(".select_part").show();
+    }else{
+      $(".select_part").removeClass("active");
+      $(".select_part").hide();
+    }
+  });
 });  
