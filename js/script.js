@@ -1,4 +1,24 @@
 $(document).ready(function(){
+  
+  // totop
+  $(window).scroll(function(){
+    let scrollEvt = $(window).scrollTop();
+
+    if(scrollEvt > 500){
+      $("#totop").fadeIn(500);
+    }else{
+      $("#totop").fadeOut(500);
+    }
+  });
+
+  $("#totop").click(function(){
+    $(window).scrollTop(0);
+  });
+
+
+
+
+
   // 카테고리 클릭
   $(".menu_board").hide();
   $("#category > span").click(function(){
@@ -131,8 +151,15 @@ $(document).ready(function(){
     $(".pd_box.best_pd").show();
     $(".cate_title").text("추천 BEST");
   });
-
-
+  // 찜한상품
+  $(".zzim").click(function(){
+    let zzim = $(".zzim").hasClass("on");
+    if(zzim == false){
+      $(this).addClass("on");
+    }else{
+      $(this).removeClass("on");
+    }
+  });
 
   // footer 계열사 바로가기
   $(".select_part").hide();
@@ -146,4 +173,5 @@ $(document).ready(function(){
       $(".select_part").hide();
     }
   });
+
 });  
